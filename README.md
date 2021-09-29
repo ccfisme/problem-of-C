@@ -5,4 +5,5 @@
 ![截屏2021-09-28 23 57 50](https://user-images.githubusercontent.com/74129445/135126519-8e4619ce-c937-41bc-92fe-99f1c03aa7ca.png)</br>
 ![截屏2021-09-29 00 22 40](https://user-images.githubusercontent.com/74129445/135126980-10a35943-5bd1-43f9-b966-b3f65f580eeb.png)</br>
 参考：https://zhuanlan.zhihu.com/p/105126066</br>
-
+不理解为什么free函数通过释放指针就能释放不知道大小的内存块，所以查找了这个问题，发现malloc申请的不是实际大小，指针位置前多出来几个字节用来存储malloc的大小，free函数是通过指针前几个字节表示的大小进行释放，而不是单单释放一个指针</br>
+参考：https://www.zhihu.com/answer/23879529</br>
